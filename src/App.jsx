@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import { AddTaskForm } from './AddTaskForm'
-import { ToDoList } from './ToDoList'
+import { useState } from 'react';
+import { AddTaskForm } from './AddTaskForm';
+import { ToDoList } from './ToDoList';
 
 export default function App() {
   const [todos, setTodos] = useState([])

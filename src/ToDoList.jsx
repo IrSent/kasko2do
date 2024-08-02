@@ -1,5 +1,5 @@
-import { ToDoItem } from "./ToDoItem"
 import List from '@mui/material/List';
+import { ToDoItem } from "./ToDoItem";
 
 export function ToDoList({ todos, toggleTodo, deleteTodo }) {
   return (
