@@ -23,7 +23,7 @@ export function ToDoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         <Checkbox label="" checked={completed} onChange={e => toggleTodo(id, e.target.checked)} />
         <ListItemText
           style={{ textDecoration : completed ? 'line-through' : 'none' }}
-          primary={<Typography noWrap>{title}</Typography>}
+          primary={<Typography noWrap sx={{ whiteSpace: 'pre-line'}}>{title}</Typography>}
         />
     </ListItem>
   )

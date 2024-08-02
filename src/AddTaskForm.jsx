@@ -18,9 +18,9 @@ export function AddTaskForm({ addTodo }) {
         <Box sx={{ my: 3 }}>
           <TextField
             fullWidth
+            multiline
             label="New Task"
             id="new_task"
-            inputProps={{ maxLength: 60 }}
             value={newTodo}
             onChange={e => setNewTodo(e.target.value)} />
           <label htmlFor="new_task"></label>
