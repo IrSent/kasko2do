@@ -12,16 +12,24 @@ export function AddTaskForm({ addTodo }) {
       addTodo(newTodo)
       setNewTodo("")
     }
+
+    const handleKeyDown = e => {
+      if ((e.which === 13) || (e.keyCode === 13 && e.shiftKey)) {
+        handleSubmit(e);
+      }
+    };
   
     return (
       <form onSubmit={handleSubmit}>
         <Box sx={{ my: 3 }}>
           <TextField
+            autoFocus={true}
             fullWidth
             multiline
             label="New Task"
             id="new_task"
             value={newTodo}
+            onKeyDown={handleKeyDown}
             onChange={e => setNewTodo(e.target.value)} />
           <label htmlFor="new_task"></label>
         </Box>
