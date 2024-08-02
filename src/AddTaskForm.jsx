@@ -20,7 +20,7 @@ export function AddTaskForm({ addTodo }) {
     };
   
     return (
-      <form onSubmit={handleSubmit}>
+      <Box component="form" onSubmit={handleSubmit}>
         <Box sx={{ my: 3 }}>
           <TextField
             autoFocus={true}
@@ -31,9 +31,8 @@ export function AddTaskForm({ addTodo }) {
             value={newTodo}
             onKeyDown={handleKeyDown}
             onChange={e => setNewTodo(e.target.value)} />
-          <label htmlFor="new_task"></label>
         </Box>
-        <Button type="submit" variant="contained" disabled={newTodo === ""}>Add</Button>
-      </form>
+        <Button type="submit" variant="contained" disabled={!newTodo}>Add</Button>
+      </Box>
     )
   }
