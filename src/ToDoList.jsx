@@ -3,8 +3,7 @@ import List from '@mui/material/List';
 
 export function ToDoList({ todos, toggleTodo, deleteTodo }) {
   return (
-    <List
-      sx={{ m: 1.2 }} >
+    <List sx={{ pt: 3 }}>
         {todos.length === 0 && "Do something already!"}
         {todos.map(todo => {
           return (

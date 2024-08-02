@@ -20,7 +20,7 @@ export function AddTaskForm({ addTodo }) {
             fullWidth
             label="New Task"
             id="new_task"
-            inputProps={{ maxLength: 30 }}
+            inputProps={{ maxLength: 60 }}
             value={newTodo}
             onChange={e => setNewTodo(e.target.value)} />
           <label htmlFor="new_task"></label>
