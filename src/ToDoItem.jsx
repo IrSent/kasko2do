@@ -14,7 +14,7 @@ export function ToDoItem({ completed, id, title, toggleTodo, deleteTodo }) {
       p: 0.5,
       minWidth: 300,
       '&:not(:last-child)': {
-        mb: 2
+        mb: 1.5
       }
     }}>
         <Button sx={{ m: 1.2, p: 0.4, }} onClick={() => deleteTodo(id)} variant="outlined" color="error">
