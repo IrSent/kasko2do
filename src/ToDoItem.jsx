@@ -4,6 +4,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
+import ListItemText from '@mui/material/ListItemText';
 
 export function ToDoItem({ completed, id, title, toggleTodo, deleteTodo }) {
   return (
@@ -16,13 +17,14 @@ export function ToDoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         mb: 2
       }
     }}>
-      <Button sx={{ m: 1.2, p: 0.4, }} onClick={() => deleteTodo(id)} variant="outlined" color="error"><DeleteIcon /></Button>
-      <FormControlLabel
-        sx={{ m: 0.2, p: 0.5 }}
-        style={{ textDecoration : completed ? 'line-through' : 'none' }}
-        control={<Checkbox label="" checked={completed} onChange={e => toggleTodo(id, e.target.checked)} />}
-        label={<Typography noWrap>{title}</Typography>}
-        ></FormControlLabel>
+        <Button sx={{ m: 1.2, p: 0.4, }} onClick={() => deleteTodo(id)} variant="outlined" color="error">
+          <DeleteIcon />
+        </Button>
+        <Checkbox label="" checked={completed} onChange={e => toggleTodo(id, e.target.checked)} />
+        <ListItemText
+          style={{ textDecoration : completed ? 'line-through' : 'none' }}
+          primary={<Typography noWrap>{title}</Typography>}
+        />
     </ListItem>
   )
 }

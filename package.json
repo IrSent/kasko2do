@@ -4,8 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "engines": {
-    "node": ">=20.16.0",
-    "npm": ">=10.8.1"
+    "node": ">=20"
   },
   "scripts": {
     "dev": "vite",
