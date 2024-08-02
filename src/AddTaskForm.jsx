@@ -14,13 +14,13 @@ export function AddTaskForm({ addTodo }) {
     }
   
     return (
-      <form onSubmit={handleSubmit} className="add-task-form">
-        <Box sx={{ my: 6 }}>
+      <form onSubmit={handleSubmit}>
+        <Box sx={{ my: 3 }}>
           <TextField
             fullWidth
             label="New Task"
             id="new_task"
-            inputProps={{ maxLength: 40 }}
+            inputProps={{ maxLength: 30 }}
             value={newTodo}
             onChange={e => setNewTodo(e.target.value)} />
           <label htmlFor="new_task"></label>
